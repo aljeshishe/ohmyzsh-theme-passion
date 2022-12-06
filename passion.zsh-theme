@@ -122,6 +122,15 @@ output_command_execute_after() {
     # cost
     local time_end="$(current_time_millis)";
     local cost=$(bc -l <<<"${time_end}-${COMMAND_TIME_BEIGIN}");
+        
+    local threshold=${PASSION_BEEP_THRESHOLD:-5}
+
+    # beep if > threshold secs
+    if (( $cost > $threshold ));
+    then
+        echo \\a ;
+    fi
+
     COMMAND_TIME_BEIGIN="-20200325"
     local length_cost=${#cost};
     if [ "$length_cost" = "4" ];
