@@ -10,7 +10,18 @@ An oh-my-zsh theme.
 * command running time cost prompt.
 * command running error hint.
 
-## Usage
+## Installation
+
+```bash
+get -O ~/.oh-my-zsh/custom/themes/passion.zsh-theme https://raw.githubusercontent.com/aljeshishe/ohmyzsh-theme-passion/master/passion.zsh-theme
+```
+
+add to ~/.zshrc
+```
+ZSH_THEME="passion"
+# optional
+export PASSION_BEEP_THRESHOLD=5
+```
 
 REF: [Oh-My-Zsh External themes](https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes)
 
